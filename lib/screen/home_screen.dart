@@ -3,6 +3,7 @@ import 'package:reverpod/layout/default_layout.dart';
 import 'package:reverpod/screen/auto_dispose_modifier_screen.dart';
 import 'package:reverpod/screen/family_modifier_screen.dart';
 import 'package:reverpod/screen/future_provider_screen.dart';
+import 'package:reverpod/screen/listen_provider_screen.dart';
 import 'package:reverpod/screen/state_notifier_provider_screen.dart';
 import 'package:reverpod/screen/state_provider_screen.dart';
 import 'package:reverpod/screen/stream_provider_screen.dart';
@@ -75,6 +76,16 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('AutoDisposeModifierScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => ListenProviderScreen(),
+                ),
+              );
+            },
+            child: Text('ListenProviderScreen'),
           ),
         ],
       ),
