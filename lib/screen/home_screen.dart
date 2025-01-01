@@ -3,6 +3,7 @@ import 'package:reverpod/layout/default_layout.dart';
 import 'package:reverpod/screen/future_provider_screen.dart';
 import 'package:reverpod/screen/state_notifier_provider_screen.dart';
 import 'package:reverpod/screen/state_provider_screen.dart';
+import 'package:reverpod/screen/stream_provider_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,7 +23,8 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('StateProviderScreen'),
-          ),ElevatedButton(
+          ),
+          ElevatedButton(
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -31,7 +33,8 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('StateNotifierProviderScreen'),
-          ), ElevatedButton(
+          ),
+          ElevatedButton(
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
@@ -40,6 +43,16 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('FutureProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => StreamProviderScreen(),
+                ),
+              );
+            },
+            child: Text('StreamProviderScreen'),
           ),
         ],
       ),
