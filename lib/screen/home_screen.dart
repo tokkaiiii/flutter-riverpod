@@ -4,6 +4,7 @@ import 'package:reverpod/screen/auto_dispose_modifier_screen.dart';
 import 'package:reverpod/screen/family_modifier_screen.dart';
 import 'package:reverpod/screen/future_provider_screen.dart';
 import 'package:reverpod/screen/listen_provider_screen.dart';
+import 'package:reverpod/screen/provider_screen.dart';
 import 'package:reverpod/screen/select_provider_screen.dart';
 import 'package:reverpod/screen/state_notifier_provider_screen.dart';
 import 'package:reverpod/screen/state_provider_screen.dart';
@@ -97,6 +98,16 @@ class HomeScreen extends StatelessWidget {
               );
             },
             child: Text('SelectProviderScreen'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => ProviderScreen(),
+                ),
+              );
+            },
+            child: Text('ProviderScreen'),
           ),
         ],
       ),
